@@ -1,0 +1,6 @@
+.impeccable/review/
+.impeccable/ref/
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/hook.cache.json
+.impeccable/config.local.json

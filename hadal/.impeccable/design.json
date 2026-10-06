@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T00:00:00Z",
+  "title": "Design System: HADAL",
+  "extensions": {
+    "colorMeta": {
+      "crimson": { "role": "primary", "displayName": "Swallowed Crimson", "canonical": "oklch(53.8% 0.184 24)", "tonalRamp": ["#320000", "#5b0000", "#860000", "#ae1323", "#d54143", "#fc6664", "#ff958f", "#ffc8c0"] },
+      "crimson-btn": { "role": "primary", "displayName": "Commitment Crimson", "canonical": "oklch(50.1% 0.178 24)", "tonalRamp": ["#310000", "#5a0000", "#850001", "#ac1a25", "#d24545", "#fa6965", "#ff9790", "#ffc9c1"] },
+      "crimson-text": { "role": "primary", "displayName": "Signal Crimson", "canonical": "oklch(62.4% 0.192 23)", "tonalRamp": ["#330000", "#5d0000", "#880002", "#b10324", "#d83c44", "#ff6264", "#ff9390", "#ffc6c1"] },
+      "crimson-fold": { "role": "primary", "displayName": "Crimson Fold", "tonalRamp": ["#320000", "#5b0000", "#860000", "#ae1323", "#d54143", "#fc6664", "#ff958f", "#ffc8c0"] },
+      "board": { "role": "neutral", "displayName": "Abyssal Board", "canonical": "oklch(17.5% 0.017 253)", "tonalRamp": ["#060c12", "#1e252c", "#394049", "#575e67", "#767e88", "#979fa9", "#bcc5cf", "#e6f0fa"] },
+      "board-raised": { "role": "neutral", "displayName": "Raised Board", "canonical": "oklch(21.4% 0.024 252)", "tonalRamp": ["#050c15", "#1c252f", "#37414c", "#545f6b", "#737f8b", "#94a0ad", "#b9c6d4", "#e3f0ff"] },
+      "board-deep": { "role": "neutral", "displayName": "Deep Board", "canonical": "oklch(14.7% 0.013 252)", "tonalRamp": ["#070c11", "#20252a", "#3b4047", "#585e65", "#787e85", "#999fa6", "#bec5cc", "#e8eff7"] },
+      "board-ground": { "role": "neutral", "displayName": "Board Ground", "canonical": "oklch(12.6% 0.012 249)", "tonalRamp": ["#070c10", "#20252a", "#3b4046", "#585e64", "#787e84", "#999fa6", "#bec5cc", "#e8eff7"] },
+      "paper": { "role": "neutral", "displayName": "Pulp Paper", "canonical": "oklch(91.7% 0.019 86)", "tonalRamp": ["#0f0b04", "#28241a", "#443f35", "#625d52", "#827d71", "#a39e92", "#c9c4b7", "#f4eee1"] },
+      "paper-2": { "role": "neutral", "displayName": "Paper Grey", "canonical": "oklch(81.9% 0.026 87)", "tonalRamp": ["#100a01", "#292315", "#463f30", "#645d4d", "#847d6c", "#a59e8c", "#cbc3b1", "#f6eedb"] },
+      "paper-3": { "role": "neutral", "displayName": "Pressed Paper", "canonical": "oklch(67.6% 0.029 86)", "tonalRamp": ["#110a00", "#2a2313", "#473f2e", "#655d4b", "#857c6a", "#a79d8a", "#cdc3af", "#f7eed9"] },
+      "paper-grey": { "role": "neutral", "displayName": "Grey Caption", "canonical": "oklch(76.8% 0.019 86)", "tonalRamp": ["#0f0b03", "#282319", "#443f34", "#625d51", "#827d70", "#a49e91", "#cac3b6", "#f4eee0"] },
+      "ash": { "role": "neutral", "displayName": "Pressed Ash", "canonical": "oklch(32.1% 0.025 253)", "tonalRamp": ["#040c16", "#1b2530", "#36414d", "#545f6c", "#737e8c", "#94a0ae", "#b9c5d5", "#e3f0ff"] },
+      "ash-hi": { "role": "neutral", "displayName": "Ash Highlight", "canonical": "oklch(37.4% 0.027 251)", "tonalRamp": ["#040c16", "#1a2531", "#35414e", "#525f6d", "#717f8d", "#92a0af", "#b7c6d6", "#e1f0ff"] },
+      "ink": { "role": "neutral", "displayName": "Shadow Ink", "canonical": "oklch(10.4% 0.010 241)", "tonalRamp": ["#080c0f", "#202529", "#3b4145", "#595e63", "#787e83", "#999fa4", "#bfc5ca", "#e9eff5"] },
+      "ink-text": { "role": "neutral", "displayName": "Ink Text", "canonical": "oklch(20.0% 0.009 264)", "tonalRamp": ["#090b0f", "#222428", "#3d4044", "#5b5e63", "#7b7d83", "#9c9ea4", "#c1c4ca", "#ebeef4"] },
+      "ink-muted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "oklch(39.9% 0.012 88)", "tonalRamp": ["#0d0b06", "#26241d", "#423f39", "#605d56", "#807d75", "#a19e96", "#c7c4bb", "#f2eee5"] },
+      "surface-water": { "role": "tertiary", "displayName": "Surface Water", "tonalRamp": ["#000e1e", "#00293a", "#184657", "#386477", "#588498", "#78a6bb", "#9dcce2", "#c7f7ff"] },
+      "zone-0": { "role": "tertiary", "displayName": "Epipelagic", "canonical": "oklch(38.6% 0.058 227)", "tonalRamp": ["#000e1e", "#00293a", "#184657", "#386477", "#588498", "#78a6bb", "#9dcce2", "#c7f7ff"] },
+      "zone-1": { "role": "tertiary", "displayName": "Mesopelagic", "canonical": "oklch(31.7% 0.048 234)", "tonalRamp": ["#000d1c", "#062738", "#244456", "#426275", "#618296", "#81a4b8", "#a6cadf", "#d0f5ff"] },
+      "zone-2": { "role": "tertiary", "displayName": "Bathypelagic", "canonical": "oklch(24.3% 0.035 241)", "tonalRamp": ["#000d18", "#142633", "#2f4251", "#4d6070", "#6c8090", "#8ca2b2", "#b1c8d9", "#dbf2ff"] },
+      "zone-3": { "role": "tertiary", "displayName": "Abyssopelagic", "canonical": "oklch(19.4% 0.024 244)", "tonalRamp": ["#030c15", "#1a252f", "#35414c", "#525f6b", "#717f8b", "#92a0ad", "#b7c6d3", "#e1f1fe"] },
+      "zone-4": { "role": "tertiary", "displayName": "Hadalpelagic", "canonical": "oklch(13.8% 0.011 252)", "tonalRamp": ["#080c10", "#202429", "#3c4045", "#595e64", "#797e84", "#9a9fa5", "#bfc5cb", "#e9eff6"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only, stacked one phrase per line, uppercase, two-layer text shadow." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles, uppercase, balanced wrap." },
+      "title": { "displayName": "Title", "purpose": "Zone names and smaller stencil titles, uppercase." },
+      "numeral": { "displayName": "Numeral", "purpose": "Keyframe numbers, part numbers, dive years." },
+      "label": { "displayName": "Label", "purpose": "Every tab and field label, uppercase." },
+      "label-sm": { "displayName": "Label Small", "purpose": "Data terms over readouts and facts, depth marks, uppercase." },
+      "body": { "displayName": "Body", "purpose": "Running text as typed workshop notes, 46 to 52ch." },
+      "readout": { "displayName": "Readout", "purpose": "Live and compared values with tabular figures." }
+    },
+    "shadows": [
+      { "name": "lift-sm", "value": "drop-shadow(0 1px 1px rgb(0 0 0 / .45)) drop-shadow(0 5px 8px rgb(0 0 0 / .32))", "purpose": "Filter. Resting lift of tabs, strips and keyframe tabs." },
+      { "name": "lift", "value": "drop-shadow(0 2px 1px rgb(0 0 0 / .5)) drop-shadow(0 10px 14px rgb(0 0 0 / .38))", "purpose": "Filter. Hover and active lift of tabs." },
+      { "name": "pressed", "value": "drop-shadow(0 1px 1px rgb(0 0 0 / .5))", "purpose": "Filter. Tab while pressed." },
+      { "name": "sheet-lift", "value": "drop-shadow(0 3px 2px rgb(0 0 0 / .5)) drop-shadow(0 30px 40px rgb(0 0 0 / .55))", "purpose": "Filter. The pinned briefing sheet." },
+      { "name": "figure-cast", "value": "drop-shadow(14px -10px 10px rgb(0 0 0 / .55)) drop-shadow(0 3px 2px rgb(0 0 0 / .4))", "purpose": "Filter. Paper figures casting onto the board." },
+      { "name": "well", "value": "inset 0 10px 22px rgb(0 0 0 / .55), inset 0 0 0 1px rgb(0 0 0 / .6)", "purpose": "Diorama window pressed into the box." },
+      { "name": "well-deep", "value": "inset 0 14px 30px rgb(0 0 0 / .6)", "purpose": "Hadal zone well." },
+      { "name": "field-press", "value": "inset 0 2px 4px rgb(0 0 0 / .18)", "purpose": "Text fields at rest." },
+      { "name": "display-text", "value": "0 2px 3px rgb(0 0 0 / .55), 0 12px 22px rgb(0 0 0 / .45)", "purpose": "Text shadow on the hero display line." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "All state transitions and linkage fills." },
+      { "name": "tab-lift", "value": ".35s", "purpose": "Tab and keyframe lift on hover." },
+      { "name": "tab-press", "value": ".08s", "purpose": "Tab press." },
+      { "name": "lamp", "value": ".6s", "purpose": "Submersible lamp fade by depth." },
+      { "name": "master-clock", "value": "crank angle", "purpose": "Scene motion (linkage swing, strata translate, sub bob) is a function of the crank value, never a timer." },
+      { "name": "reduced-motion", "value": "transition-duration: .01ms", "purpose": "All transitions and animations collapse; smooth scroll off." }
+    ],
+    "breakpoints": [
+      { "name": "nav-drop", "value": "1180px" },
+      { "name": "phone", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Paper Tab",
+      "kind": "button",
+      "refersTo": "tab",
+      "description": "Default control: notched pulp-paper tab with a punched slot mark.",
+      "html": "<a class=\"ds-tab\" href=\"#\">Las zonas</a>",
+      "css": ".ds-tab { --ds-bg: var(--paper, #e9e3d6); position: relative; isolation: isolate; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 24px 8px 30px; color: var(--ink-text, #14161a); font-family: var(--f-label); font-weight: 800; font-size: 1rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; line-height: 1.1; filter: var(--lift-sm); transition: transform .35s var(--ease), filter .35s var(--ease); } .ds-tab::before { content: \"\"; position: absolute; inset: 0; z-index: -1; background: var(--grain), var(--ds-bg); background-blend-mode: multiply; clip-path: var(--notch); } .ds-tab::after { content: \"\"; position: absolute; left: 10px; top: 50%; width: 4px; height: 16px; margin-top: -8px; border-radius: 2px; background: var(--board-deep, #070b10); box-shadow: inset 1px 1px 1px rgb(0 0 0 / .8), 1px 1px 0 rgb(255 255 255 / .25); } .ds-tab:hover { transform: translateY(-2px); filter: var(--lift); } .ds-tab:active { transform: translateY(1px); filter: drop-shadow(0 1px 1px rgb(0 0 0 / .5)); transition-duration: .08s; } .ds-tab:focus-visible { outline: 2px dashed var(--paper, #e9e3d6); outline-offset: 4px; }"
+    },
+    {
+      "name": "Commitment Tab",
+      "kind": "button",
+      "refersTo": "tab-crimson",
+      "description": "Crimson tab for the briefing request and final descent only.",
+      "html": "<button class=\"ds-tab-crimson\" type=\"button\">Solicitar briefing</button>",
+      "css": ".ds-tab-crimson { position: relative; isolation: isolate; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 24px 8px 30px; border: 0; background: none; cursor: pointer; color: var(--paper, #e9e3d6); font-family: var(--f-label); font-weight: 800; font-size: 1rem; letter-spacing: .1em; text-transform: uppercase; line-height: 1.1; filter: var(--lift-sm); transition: transform .35s var(--ease), filter .35s var(--ease); } .ds-tab-crimson::before { content: \"\"; position: absolute; inset: 0; z-index: -1; background: var(--grain), var(--crimson-btn, #b3242b); background-blend-mode: multiply; clip-path: var(--notch); } .ds-tab-crimson::after { content: \"\"; position: absolute; left: 10px; top: 50%; width: 4px; height: 16px; margin-top: -8px; border-radius: 2px; background: var(--board-deep, #070b10); box-shadow: inset 1px 1px 1px rgb(0 0 0 / .8), 1px 1px 0 rgb(255 255 255 / .25); } .ds-tab-crimson:hover { transform: translateY(-2px); filter: var(--lift); } .ds-tab-crimson:active { transform: translateY(1px); filter: drop-shadow(0 1px 1px rgb(0 0 0 / .5)); transition-duration: .08s; } .ds-tab-crimson:focus-visible { outline: 2px dashed var(--paper, #e9e3d6); outline-offset: 4px; }"
+    },
+    {
+      "name": "Ash Tab",
+      "kind": "button",
+      "refersTo": "tab-ash",
+      "description": "Pressed-ash tab for secondary actions on the board.",
+      "html": "<button class=\"ds-tab-ash\" type=\"button\">Ver en la manivela</button>",
+      "css": ".ds-tab-ash { position: relative; isolation: isolate; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 24px 8px 30px; border: 0; background: none; cursor: pointer; color: var(--paper, #e9e3d6); font-family: var(--f-label); font-weight: 800; font-size: 1rem; letter-spacing: .1em; text-transform: uppercase; line-height: 1.1; filter: var(--lift-sm); transition: transform .35s var(--ease), filter .35s var(--ease); } .ds-tab-ash::before { content: \"\"; position: absolute; inset: 0; z-index: -1; background: var(--grain), var(--ash, #2a3440); background-blend-mode: multiply; clip-path: var(--notch); } .ds-tab-ash::after { content: \"\"; position: absolute; left: 10px; top: 50%; width: 4px; height: 16px; margin-top: -8px; border-radius: 2px; background: var(--board-deep, #070b10); box-shadow: inset 1px 1px 1px rgb(0 0 0 / .8), 1px 1px 0 rgb(255 255 255 / .25); } .ds-tab-ash:hover { transform: translateY(-2px); filter: var(--lift); } .ds-tab-ash:focus-visible { outline: 2px dashed var(--paper, #e9e3d6); outline-offset: 4px; }"
+    },
+    {
+      "name": "Paper Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Notched paper text field with painted slot mark, inset press, ink focus ring and crimson error ring.",
+      "html": "<input class=\"ds-field\" type=\"email\" placeholder=\"tu@correo.com\">",
+      "css": ".ds-field { min-height: 48px; padding: 12px 16px 12px 28px; border: 0; font-family: var(--f-note); font-size: 1.0625rem; background: linear-gradient(var(--board-deep), var(--board-deep)) 12px 50% / 4px 16px no-repeat, var(--grain), var(--paper, #e9e3d6); background-blend-mode: normal, multiply, normal; color: var(--ink-text, #14161a); clip-path: var(--notch); box-shadow: inset 0 2px 4px rgb(0 0 0 / .18); caret-color: var(--crimson-btn, #b3242b); transition: box-shadow .25s var(--ease); } .ds-field:focus { outline: none; box-shadow: inset 0 0 0 3px var(--ink-text, #14161a); } .ds-field[aria-invalid=\"true\"] { box-shadow: inset 0 0 0 3px var(--crimson-btn, #b3242b); }"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "choice",
+      "description": "Radio choice as a paper-grey notched chip; checked inverts to ink.",
+      "html": "<label class=\"ds-choice\"><input type=\"radio\" name=\"ds-exp\" checked><span>Nunca</span></label> <label class=\"ds-choice\"><input type=\"radio\" name=\"ds-exp\"><span>Buceo o inmersiones</span></label>",
+      "css": ".ds-choice { position: relative; display: inline-block; cursor: pointer; } .ds-choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; } .ds-choice span { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px 8px 24px; font-family: var(--f-note); font-size: .95rem; color: var(--ink-text, #14161a); background: linear-gradient(var(--board-deep), var(--board-deep)) 10px 50% / 4px 14px no-repeat, var(--grain), var(--paper-2, #cbc3b1); background-blend-mode: normal, multiply, normal; clip-path: var(--notch); transition: background-color .2s, color .2s; } .ds-choice input:checked + span { background: linear-gradient(var(--paper-3), var(--paper-3)) 10px 50% / 4px 14px no-repeat, var(--ink-text, #14161a); color: var(--paper, #e9e3d6); } .ds-choice:has(input:focus-visible) { outline: 2px dashed var(--ink-text, #14161a); outline-offset: 3px; }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "tab-nav",
+      "description": "Sticky bar fading from board to transparent: brand tab, paper-grey nav tabs, crimson CTA right.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><span class=\"ds-nav-mark\"></span>HADAL</a><a class=\"ds-nav-tab\" href=\"#\">La bajada</a><a class=\"ds-nav-tab\" href=\"#\">Las zonas</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 16px; padding: 16px var(--gutter, 32px); background: linear-gradient(var(--board, #0b1118) 70%, rgb(11 17 24 / 0)); } .ds-nav-brand { display: inline-flex; align-items: center; gap: 12px; color: var(--paper, #e9e3d6); text-decoration: none; font-family: var(--f-display); font-weight: 900; font-size: 1.6rem; letter-spacing: .14em; } .ds-nav-mark { width: 36px; height: 36px; background: var(--crimson-btn, #b3242b); clip-path: var(--notch); } .ds-nav-tab { position: relative; isolation: isolate; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px 8px 24px; color: var(--ink-text, #14161a); font-family: var(--f-label); font-weight: 800; font-size: .92rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; filter: var(--lift-sm); transition: transform .35s var(--ease), filter .35s var(--ease); } .ds-nav-tab::before { content: \"\"; position: absolute; inset: 0; z-index: -1; background: var(--grain), var(--paper-2, #cbc3b1); background-blend-mode: multiply; clip-path: var(--notch); } .ds-nav-tab:hover { transform: translateY(-2px); filter: var(--lift); } .ds-nav-tab:focus-visible { outline: 2px dashed var(--paper, #e9e3d6); outline-offset: 4px; }"
+    },
+    {
+      "name": "Zone Keyframe Tab",
+      "kind": "custom",
+      "refersTo": "keyframe-tab",
+      "description": "Signature: one tab per ocean zone; active tab turns pulp paper, slides out 8px, numeral turns crimson.",
+      "html": "<button class=\"ds-kf\" type=\"button\"><span class=\"ds-kf-num\">2</span><span class=\"ds-kf-name\">Mesopelágica</span><span class=\"ds-kf-range\">200–1.000 m</span></button> <button class=\"ds-kf\" type=\"button\" aria-current=\"true\"><span class=\"ds-kf-num\">3</span><span class=\"ds-kf-name\">Batipelágica</span><span class=\"ds-kf-range\">1.000–4.000 m</span></button>",
+      "css": ".ds-kf { position: relative; isolation: isolate; width: 152px; display: grid; grid-template-columns: auto 1fr; grid-template-areas: \"num name\" \"num range\"; column-gap: 8px; padding: 8px 12px; border: 0; background: none; cursor: pointer; text-align: left; color: var(--ink-text, #14161a); filter: var(--lift-sm); transition: transform .35s var(--ease), filter .35s var(--ease); } .ds-kf::before { content: \"\"; position: absolute; inset: 0; z-index: -1; background: var(--grain), var(--paper-2, #cbc3b1); background-blend-mode: multiply; clip-path: var(--notch); } .ds-kf:hover { transform: translateX(-3px); filter: var(--lift); } .ds-kf[aria-current=\"true\"] { transform: translateX(-8px); filter: var(--lift); } .ds-kf[aria-current=\"true\"]::before { background: var(--grain), var(--paper, #e9e3d6); background-blend-mode: multiply; } .ds-kf-num { grid-area: num; font-family: var(--f-display); font-weight: 900; font-size: 1.6rem; line-height: 1; color: var(--ink-muted, #4a4740); } .ds-kf[aria-current=\"true\"] .ds-kf-num { color: var(--crimson, #c22e34); } .ds-kf-name { grid-area: name; font-family: var(--f-label); font-weight: 800; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1.15; } .ds-kf-range { grid-area: range; font-family: var(--f-note); font-size: .72rem; color: var(--ink-muted, #4a4740); font-variant-numeric: tabular-nums; } .ds-kf:focus-visible { outline: 2px dashed var(--paper, #e9e3d6); outline-offset: 4px; }"
+    },
+    {
+      "name": "Caption Strip",
+      "kind": "custom",
+      "refersTo": "caption-strip",
+      "description": "Paper strip with a swallowtail right edge naming a species.",
+      "html": "<p class=\"ds-strip\"><strong>Pulpo dumbo</strong> <em>Grimpoteuthis</em>. Se ha filmado a casi 7.000 m.</p>",
+      "css": ".ds-strip { position: relative; isolation: isolate; display: inline-block; max-width: 52ch; padding: 12px 16px 12px 24px; color: var(--ink-text, #14161a); font-family: var(--f-note); font-size: .95rem; filter: var(--lift-sm); } .ds-strip::before { content: \"\"; position: absolute; inset: 0; z-index: -1; background: var(--grain), var(--paper, #e9e3d6); background-blend-mode: multiply; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 50%, 100% 100%, 0 100%); } .ds-strip strong { font-family: var(--f-label); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; } .ds-strip em { color: var(--ink-muted, #4a4740); }"
+    },
+    {
+      "name": "Depth Mark",
+      "kind": "chip",
+      "refersTo": "depth-mark",
+      "description": "Pulp-paper flag with pointed left end for depths and dive times.",
+      "html": "<span class=\"ds-mark\">1.000 m</span>",
+      "css": ".ds-mark { display: inline-block; padding: 2px 8px 1px 10px; background: var(--paper, #e9e3d6); color: var(--ink-text, #14161a); font-family: var(--f-label); font-weight: 800; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; font-variant-numeric: tabular-nums; clip-path: polygon(4px 0, 100% 0, 100% 100%, 4px 100%, 0 50%); }"
+    },
+    {
+      "name": "Briefing Sheet",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "Pulp-paper sheet with a 14px notch, pinned to the board with an ink push pin.",
+      "html": "<div class=\"ds-sheet\"><h3 class=\"ds-sheet-title\">Solicita el briefing</h3><p>Preparación, seguridad, el sumergible y las fechas posibles.</p></div>",
+      "css": ".ds-sheet { position: relative; isolation: isolate; max-width: 1100px; padding: clamp(32px, 5vw, 72px); color: var(--ink-text, #14161a); font-family: var(--f-note); filter: drop-shadow(0 3px 2px rgb(0 0 0 / .5)) drop-shadow(0 30px 40px rgb(0 0 0 / .55)); } .ds-sheet::before { content: \"\"; position: absolute; inset: 0; z-index: -1; background: var(--grain), var(--paper, #e9e3d6); background-blend-mode: multiply; clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px); } .ds-sheet::after { content: \"\"; position: absolute; top: 10px; left: 50%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--ink-text, #14161a); box-shadow: 0 3px 4px rgb(0 0 0 / .45); } .ds-sheet-title { font-family: var(--f-display); font-weight: 900; font-size: 2.6rem; line-height: .9; text-transform: uppercase; } .ds-sheet p { margin-top: 16px; color: var(--ink-muted, #4a4740); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Abyssal Automaton",
+    "overview": "HADAL is cut and slotted paper laid on an abyssal board. Pulp-white stock forms every figure, tab, label and sheet; paper grey and pressed ash are the secondary stocks; the board underneath is a near-black blue carried by fiber and grain overlays. Depth comes from real cast shadows (filter drop-shadows) under paper that is physically lifted off the board, never from glows or gloss.\n\nThe system is mechanical. A single crank is the master clock: linkages swing with its angle, strata translate, and nothing in the scene moves on its own timer. Crimson is the only chromatic accent and it is rationed: red is the first color the sea swallows, so it marks only what is moving, what is committed and what has gone wrong.\n\nType is workshop lettering: stencil caps for display, condensed heavy caps for every label and tab, and a typewriter face for running text and readouts, as if notes were typed onto the board.",
+    "keyCharacteristics": [
+      "Paper on board: light stock figures on a dark fiber ground, with grain multiplied into every paper fill.",
+      "Every control is a notched paper tab with a punched slot mark.",
+      "Lift through drop-shadow filters on the element, never box-shadow on a clipped shape.",
+      "One rationed crimson for motion, commitment and error.",
+      "Stencil, condensed caps and typewriter: three voices, each with one job.",
+      "Crank-driven motion only; reduced motion collapses all transitions."
+    ],
+    "rules": [
+      { "name": "The Swallowed Red Rule", "body": "Crimson appears only on what moves, what commits and what fails: active figure parts, the crank knob, the active keyframe numeral, commitment tabs, one headline line, the brand mark, selection and error. Any other crimson is a defect.", "section": "colors" },
+      { "name": "The Depth Means Darker Rule", "body": "Water color is indexed to depth through the zone ramp. Deeper content gets a darker zone, never a lighter or more saturated one.", "section": "colors" },
+      { "name": "The Three Voices Rule", "body": "Stencil speaks headings and numerals, condensed caps label things, typewriter explains and measures. Don't set running text in caps or headings in Courier.", "section": "typography" },
+      { "name": "The Tabular Numbers Rule", "body": "Every number that changes or is compared (readouts, depth marks, ranges, times) uses tabular figures.", "section": "typography" },
+      { "name": "The Lift Follows The Cut Rule", "body": "Any clipped paper shape is lifted with a drop-shadow filter on the element and painted by its ::before. Never put box-shadow on a clip-pathed shape; the clip cuts the shadow away.", "section": "elevation" },
+      { "name": "The Hover Lifts Rule", "body": "Hover raises paper (2 to 3px translate plus the larger lift) and press pushes it down (1px, short shadow, 80ms). No color shifts on hover.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do build every new control as a notched paper tab: clip-path: var(--notch) on ::before, fill with grain multiplied into the stock, slot mark at left, lift with --lift-sm.",
+      "Do keep text on paper in ink (ink-text, ink-muted) and text on the board in paper (paper, paper-grey).",
+      "Do drive scene motion from the crank value (manual or autoplay) with the cubic-bezier(.16, 1, .3, 1) ease, and collapse every transition under reduced motion.",
+      "Do separate sections with 2px dashed ash rules and generous s8 / s9 spacing.",
+      "Do use tabular figures for every live or compared number."
+    ],
+    "donts": [
+      "Don't use crimson outside the Swallowed Red Rule's list.",
+      "Don't round the corners of paper; radius is only for pins, discs, slots and the crank.",
+      "Don't put box-shadow on a clip-pathed element or shift color on hover; lift it.",
+      "Don't add ambient or timer-driven scene animation, glows or glowing particle fields. Marine snow is printed as static paper dots in the middle strata only.",
+      "Don't use the zone ramp for UI chrome; it paints water by depth."
+    ]
+  }
+}

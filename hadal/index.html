@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HADAL — Expediciones al Challenger Deep</title>
+  <meta name="description" content="Tres personas, un sumergible y 10.935 metros de océano. Gira la manivela y baja al fondo de la Fosa de las Marianas.">
+  <meta name="theme-color" content="#0b1118">
+  <link rel="preload" href="fonts/stencil-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/courier-prime.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- Sea turtle, epipelagic -->
+      <g id="art-turtle">
+        <g class="link" style="--o: 150px 62px; --amp: 26deg">
+          <polygon class="lk" points="150,60 172,22 190,12 166,62"/>
+          <polygon class="lk-shade" points="150,60 166,62 190,12"/>
+        </g>
+        <g class="link" style="--o: 152px 90px; --amp: 18deg; --dir: -1">
+          <polygon class="lk" points="150,90 176,120 192,126 164,88"/>
+        </g>
+        <polygon class="p3" points="92,90 60,114 80,114 104,96"/>
+        <polygon class="p1" points="70,70 110,40 125,70"/>
+        <polygon class="p2" points="110,40 160,45 125,70"/>
+        <polygon class="p1" points="160,45 185,72 125,70"/>
+        <polygon class="p3" points="185,72 150,95 125,70"/>
+        <polygon class="p2" points="150,95 95,98 125,70"/>
+        <polygon class="p3" points="95,98 70,70 125,70"/>
+        <polygon class="p1" points="185,72 215,62 228,72"/>
+        <polygon class="p2" points="185,72 228,72 212,84 186,82"/>
+        <polygon class="ink" points="212,68 216,70 212,72 208,70"/>
+      </g>
+
+      <!-- Lanternfish school, mesopelagic -->
+      <g id="art-lantern">
+        <g id="lantern-one">
+          <g class="link" style="--o: 42px 70px; --amp: 22deg">
+            <polygon class="lk" points="42,70 16,50 24,70 16,90"/>
+          </g>
+          <polygon class="p1" points="70,55 130,52 160,66 100,68"/>
+          <polygon class="p2" points="70,84 130,82 160,66 100,68"/>
+          <polygon class="p3" points="42,70 70,55 100,68 70,84"/>
+          <polygon class="p2" points="96,54 110,40 122,53"/>
+          <circle class="ink" cx="146" cy="63" r="6"/>
+          <circle class="p1" cx="147.5" cy="61.5" r="1.8"/>
+          <circle class="lume" cx="78" cy="80" r="2"/>
+          <circle class="lume" cx="92" cy="80" r="2"/>
+          <circle class="lume" cx="106" cy="79" r="2"/>
+          <circle class="lume" cx="120" cy="78" r="2"/>
+        </g>
+        <use href="#lantern-one" transform="translate(118 2) scale(.55)"/>
+        <use href="#lantern-one" transform="translate(130 76) scale(.45)"/>
+      </g>
+
+      <!-- Anglerfish, bathypelagic -->
+      <g id="art-angler">
+        <polygon class="p3" points="62,72 28,50 38,76 28,104 70,90"/>
+        <polygon class="p1" points="62,72 92,38 118,74"/>
+        <polygon class="p2" points="92,38 146,40 118,74"/>
+        <polygon class="p1" points="146,40 176,60 118,74"/>
+        <polygon class="p3" points="62,72 118,74 96,110"/>
+        <polygon class="p2" points="118,74 150,104 96,110"/>
+        <polygon class="p1" points="146,40 176,60 202,72 172,80"/>
+        <polygon class="p2" points="176,60 202,72 172,80"/>
+        <polygon class="p1" points="180,78 184,90 188,79"/>
+        <polygon class="p1" points="190,76 193,86 196,75"/>
+        <circle class="ink" cx="164" cy="56" r="4"/>
+        <g class="link" style="--o: 150px 92px; --amp: 15deg">
+          <polygon class="lk" points="150,92 204,82 208,94 154,112"/>
+          <polygon class="p1" points="168,90 172,80 176,89"/>
+          <polygon class="p1" points="182,87 186,77 190,86"/>
+          <polygon class="p1" points="194,85 198,76 201,84"/>
+        </g>
+        <g class="link" style="--o: 140px 42px; --amp: 12deg; --dir: -1">
+          <path class="stalk" d="M140 42 C 150 12, 180 6, 200 18"/>
+          <circle class="lk" cx="201" cy="20" r="7"/>
+        </g>
+      </g>
+
+      <!-- Dumbo octopus, abyssopelagic -->
+      <g id="art-dumbo">
+        <g class="link" style="--o: 100px 48px; --amp: 24deg; --dir: -1">
+          <polygon class="lk" points="100,48 66,30 76,58"/>
+        </g>
+        <g class="link" style="--o: 140px 48px; --amp: 24deg">
+          <polygon class="lk" points="140,48 174,30 164,58"/>
+        </g>
+        <polygon class="p1" points="96,72 100,36 120,22 120,72"/>
+        <polygon class="p2" points="144,72 140,36 120,22 120,72"/>
+        <polygon class="p3" points="96,72 80,112 102,98"/>
+        <polygon class="p2" points="96,72 102,98 112,120 120,100 120,72"/>
+        <polygon class="p3" points="144,72 120,72 120,100 128,120 138,98"/>
+        <polygon class="p2" points="144,72 138,98 160,112"/>
+        <circle class="ink" cx="110" cy="56" r="4"/>
+        <circle class="ink" cx="130" cy="56" r="4"/>
+      </g>
+
+      <!-- Mariana snailfish, hadal -->
+      <g id="art-snail">
+        <g class="link" style="--o: 46px 75px; --amp: 18deg">
+          <polygon class="lk" points="46,74 14,62 8,78 14,92 44,82"/>
+        </g>
+        <polygon class="p1" points="100,58 170,54 150,76"/>
+        <polygon class="p2" points="170,54 196,68 150,76"/>
+        <polygon class="p3" points="196,68 186,88 150,76"/>
+        <polygon class="p2" points="186,88 150,92 150,76"/>
+        <polygon class="p1" points="150,92 90,86 100,58 150,76"/>
+        <polygon class="p3" points="90,86 44,80 46,70 100,58"/>
+        <circle class="ink" cx="180" cy="66" r="3.4"/>
+        <g class="link" style="--o: 152px 86px; --amp: 20deg; --dir: -1">
+          <polygon class="lk" points="152,86 138,114 168,106"/>
+        </g>
+      </g>
+
+      <!-- Amphipods on the trench floor -->
+      <g id="art-amphipods">
+        <path class="amphi" d="M10 12 q 10 -10 22 -2 q -4 6 -12 7 z"/>
+        <path class="amphi" d="M48 16 q 8 -8 18 -1 q -3 5 -10 5 z"/>
+        <path class="amphi" d="M78 10 q 12 -12 26 -2 q -5 7 -14 8 z"/>
+      </g>
+
+      <!-- Submersible -->
+      <g id="art-sub">
+        <polygon class="p2" points="44,34 116,34 126,54 34,54"/>
+        <polygon class="p1" points="44,34 116,34 108,44 52,44"/>
+        <rect class="ink" x="76" y="34" width="8" height="20"/>
+        <polygon class="p1" points="80,58 104,66 114,90 80,92"/>
+        <polygon class="p2" points="80,58 56,66 46,90 80,92"/>
+        <polygon class="p3" points="46,90 56,116 80,126 80,92"/>
+        <polygon class="p2" points="114,90 104,116 80,126 80,92"/>
+        <circle class="ink" cx="96" cy="94" r="10"/>
+        <circle class="port" cx="96" cy="94" r="6"/>
+        <rect class="p3" x="26" y="74" width="16" height="10"/>
+        <polygon class="p2" points="114,104 128,98 132,108 118,112"/>
+        <rect class="p3" x="58" y="126" width="12" height="10"/>
+        <rect class="p3" x="90" y="126" width="12" height="10"/>
+      </g>
+
+      <!-- Paper grain -->
+      <filter id="grain-blur"><feGaussianBlur stdDeviation="5"/></filter>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#bajada">Saltar a la bajada</a>
+
+  <header class="topbar">
+    <a class="brand tab" href="#top" aria-label="HADAL, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 160 160"><use href="#art-sub"/></svg>
+      </span>
+      <span class="brand-word">Hadal</span>
+    </a>
+    <nav class="mainnav" aria-label="Secciones">
+      <a class="tab" href="#bajada">La bajada</a>
+      <a class="tab" href="#zonas">Las zonas</a>
+      <a class="tab" href="#un-dia">Un día</a>
+      <a class="tab" href="#sumergible">El sumergible</a>
+    </nav>
+    <a class="tab tab--crimson topbar-cta" href="#briefing">Solicitar briefing</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="bajada" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 class="display" id="hero-title">
+          <span>Gira la</span>
+          <span>manivela.</span>
+          <span>Baja</span>
+          <span class="display-crimson">10.935 metros.</span>
+        </h1>
+        <p class="lede">Tres personas, un sumergible y cuatro horas de bajada hasta el fondo del Challenger Deep.</p>
+        <form class="quick" id="quick-form" novalidate>
+          <label class="quick-label" for="quick-email">Tu correo para el briefing</label>
+          <div class="quick-row">
+            <input class="field" id="quick-email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" required aria-describedby="quick-msg">
+            <button class="tab tab--crimson" type="submit">Solicitar briefing</button>
+          </div>
+          <p class="quick-msg" id="quick-msg" aria-live="polite"></p>
+        </form>
+        <a class="textlink" href="#zonas">O mira primero las cinco zonas</a>
+      </div>
+
+      <div class="automaton" id="automaton">
+        <div class="readout tab tab--flat">
+          <p class="readout-title">La bajada</p>
+          <dl class="readout-data">
+            <div><dt>Profundidad</dt><dd><span id="r-depth">0</span> m</dd></div>
+            <div><dt>Presión</dt><dd><span id="r-pressure">1</span> bar</dd></div>
+            <div><dt>Agua</dt><dd>≈ <span id="r-temp">29</span> °C</dd></div>
+            <div><dt>Luz</dt><dd id="r-light">Sol</dd></div>
+          </dl>
+        </div>
+
+        <div class="box">
+          <div class="window" id="window">
+            <div class="column" id="column">
+              <div class="stratum" data-zone="0">
+                <svg class="surface" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 18 L40 10 L90 20 L140 8 L190 18 L240 9 L290 19 L340 7 L400 16 L400 40 L0 40 Z"/></svg>
+                <span class="sun" aria-hidden="true"></span>
+                <span class="mark">0 m</span>
+                <div class="figure" data-fig="0">
+                  <svg class="cast" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-turtle"/></svg>
+                  <svg class="art" viewBox="0 0 240 140" role="img" aria-label="Tortuga verde de papel"><use href="#art-turtle"/></svg>
+                </div>
+              </div>
+              <div class="stratum" data-zone="1">
+                <svg class="edge" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 L60 8 L120 24 L170 12 L240 26 L300 10 L360 22 L400 14 L400 40 L0 40 Z"/></svg>
+                <span class="mark">200 m</span>
+                <div class="figure" data-fig="1">
+                  <svg class="cast" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-lantern"/></svg>
+                  <svg class="art" viewBox="0 0 240 140" role="img" aria-label="Peces linterna de papel"><use href="#art-lantern"/></svg>
+                </div>
+              </div>
+              <div class="stratum" data-zone="2">
+                <svg class="edge" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14 L50 26 L110 10 L180 24 L230 12 L290 26 L350 10 L400 22 L400 40 L0 40 Z"/></svg>
+                <span class="mark">1.000 m</span>
+                <div class="figure" data-fig="2">
+                  <svg class="cast" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-angler"/></svg>
+                  <svg class="art" viewBox="0 0 240 140" role="img" aria-label="Rape abisal de papel"><use href="#art-angler"/></svg>
+                </div>
+              </div>
+              <div class="stratum" data-zone="3">
+                <svg class="edge" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 24 L70 10 L130 22 L200 8 L260 24 L320 12 L400 24 L400 40 L0 40 Z"/></svg>
+                <span class="mark">4.000 m</span>
+                <div class="figure" data-fig="3">
+                  <svg class="cast" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-dumbo"/></svg>
+                  <svg class="art" viewBox="0 0 240 140" role="img" aria-label="Pulpo dumbo de papel"><use href="#art-dumbo"/></svg>
+                </div>
+              </div>
+              <div class="stratum" data-zone="4">
+                <svg class="edge" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 L40 24 L100 8 L160 26 L220 10 L280 22 L340 8 L400 20 L400 40 L0 40 Z"/></svg>
+                <span class="mark">6.000 m</span>
+                <div class="figure" data-fig="4">
+                  <svg class="cast" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-snail"/></svg>
+                  <svg class="art" viewBox="0 0 240 140" role="img" aria-label="Pez caracol de las Marianas de papel"><use href="#art-snail"/></svg>
+                </div>
+                <div class="seabed">
+                  <svg viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 L50 14 L90 28 L150 18 L210 30 L270 16 L330 26 L400 12 L400 60 L0 60 Z"/></svg>
+                  <svg class="amphipods" viewBox="0 0 110 24" aria-hidden="true"><use href="#art-amphipods"/></svg>
+                  <span class="mark mark--floor">10.935 m · fondo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rig" aria-hidden="true">
+              <span class="thread"></span>
+              <div class="sub">
+                <span class="lamp"></span>
+                <svg viewBox="0 0 160 160"><use href="#art-sub"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-front">
+            <div class="slot" aria-hidden="true"><span class="slot-pin"></span></div>
+            <div class="crank-wrap">
+              <svg class="crank" id="crank" viewBox="0 0 120 120" tabindex="0" role="slider"
+                   aria-label="Manivela de profundidad" aria-valuemin="0" aria-valuemax="10935" aria-valuenow="0"
+                   aria-valuetext="0 metros, zona epipelágica" aria-describedby="crank-help">
+                <circle class="crank-plate" cx="60" cy="60" r="50"/>
+                <circle class="crank-ring" cx="60" cy="60" r="38"/>
+                <g class="crank-arm">
+                  <rect x="56" y="54" width="44" height="12" rx="2"/>
+                  <circle class="crank-hub" cx="60" cy="60" r="14"/>
+                  <circle class="crank-hole" cx="60" cy="60" r="4"/>
+                  <circle class="crank-knob" cx="96" cy="60" r="12"/>
+                  <path class="crank-knob-fold" d="M96 48 A12 12 0 0 1 108 60 L96 60 Z"/>
+                </g>
+              </svg>
+              <p class="crank-help" id="crank-help">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v5h-5"/></svg>
+                Arrastra la manivela. Con teclado: flechas.
+              </p>
+            </div>
+            <button class="tab tab--ash autoplay" id="autoplay" type="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-play" d="M8 5l11 7-11 7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+              <span>Girar sola</span>
+            </button>
+          </div>
+        </div>
+
+        <ol class="keyframes" aria-label="Saltar a una zona">
+          <li><button type="button" data-goto="0"><span class="kf-num">1</span><span class="kf-name">Epipelágica</span><span class="kf-range">0–200 m</span><svg viewBox="0 0 240 140" aria-hidden="true"><use href="#art-turtle"/></svg></button></li>
+          <li><button type="button" data-goto="1"><span class="kf-num">2</span><span class="kf-name">Mesopelágica</span><span class="kf-range">200–1.000 m</span><svg viewBox="0 0 240 140" aria-hidden="true"><use href="#art-lantern"/></svg></button></li>
+          <li><button type="button" data-goto="2"><span class="kf-num">3</span><span class="kf-name">Batipelágica</span><span class="kf-range">1.000–4.000 m</span><svg viewBox="0 0 240 140" aria-hidden="true"><use href="#art-angler"/></svg></button></li>
+          <li><button type="button" data-goto="3"><span class="kf-num">4</span><span class="kf-name">Abisopelágica</span><span class="kf-range">4.000–6.000 m</span><svg viewBox="0 0 240 140" aria-hidden="true"><use href="#art-dumbo"/></svg></button></li>
+          <li><button type="button" data-goto="4"><span class="kf-num">5</span><span class="kf-name">Hadal</span><span class="kf-range">6.000–10.935 m</span><svg viewBox="0 0 240 140" aria-hidden="true"><use href="#art-snail"/></svg></button></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="zones" id="zonas" aria-labelledby="zonas-title">
+      <header class="section-head">
+        <h2 class="h2" id="zonas-title">La procesión</h2>
+        <p class="section-lede">Cinco franjas de agua, cinco mundos. Lo que cambia al bajar no es un decorado: es luz, temperatura y el peso de todo el océano encima.</p>
+      </header>
+
+      <article class="zone" data-zone="0">
+        <svg class="zone-art" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-turtle"/></svg>
+        <div class="zone-body">
+          <h3 class="zone-name">Epipelágica</h3>
+          <p class="zone-range">0 – 200 m</p>
+          <p class="zone-text">La zona del sol. La luz alcanza para la fotosíntesis y casi toda la vida que conoces está aquí arriba.</p>
+          <p class="strip"><strong>Tortuga verde</strong> <em>Chelonia mydas</em>. La despides en la superficie.</p>
+          <dl class="facts">
+            <div><dt>Presión</dt><dd>1 – 21 bar</dd></div>
+            <div><dt>Luz</dt><dd>Sol</dd></div>
+          </dl>
+          <button class="tab tab--ash goto" type="button" data-goto="0">Ver en la manivela</button>
+        </div>
+      </article>
+
+      <article class="zone zone--flip" data-zone="1">
+        <svg class="zone-art" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-lantern"/></svg>
+        <div class="zone-body">
+          <h3 class="zone-name">Mesopelágica</h3>
+          <p class="zone-range">200 – 1.000 m</p>
+          <p class="zone-text">Penumbra. Todavía llega algo de luz azul, pero ya no sirve para la fotosíntesis. Hacia los 1.000 m se apaga del todo.</p>
+          <p class="strip"><strong>Peces linterna</strong> <em>Myctophidae</em>. Cada noche suben a comer cerca de la superficie y al amanecer vuelven a bajar.</p>
+          <dl class="facts">
+            <div><dt>Presión</dt><dd>21 – 100 bar</dd></div>
+            <div><dt>Luz</dt><dd>Penumbra</dd></div>
+          </dl>
+          <button class="tab tab--ash goto" type="button" data-goto="1">Ver en la manivela</button>
+        </div>
+      </article>
+
+      <article class="zone zone--big" data-zone="2">
+        <svg class="zone-art" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-angler"/></svg>
+        <div class="zone-body">
+          <h3 class="zone-name">Batipelágica</h3>
+          <p class="zone-range">1.000 – 4.000 m</p>
+          <p class="zone-text">Medianoche permanente. A partir de aquí no llega ni un fotón del sol: la única luz es la que fabrican los animales.</p>
+          <p class="strip"><strong>Rape abisal</strong> <em>Melanocetus johnsonii</em>. Pesca con su propio señuelo, iluminado por bacterias bioluminiscentes.</p>
+          <dl class="facts">
+            <div><dt>Presión</dt><dd>100 – 400 bar</dd></div>
+            <div><dt>Luz</dt><dd>Solo bioluminiscencia</dd></div>
+          </dl>
+          <button class="tab tab--ash goto" type="button" data-goto="2">Ver en la manivela</button>
+        </div>
+      </article>
+
+      <article class="zone zone--flip" data-zone="3">
+        <svg class="zone-art" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-dumbo"/></svg>
+        <div class="zone-body">
+          <h3 class="zone-name">Abisopelágica</h3>
+          <p class="zone-range">4.000 – 6.000 m</p>
+          <p class="zone-text">El abismo. Agua a uno o dos grados, casi quieta, sobre llanuras de sedimento que cubren buena parte del planeta.</p>
+          <p class="strip"><strong>Pulpo dumbo</strong> <em>Grimpoteuthis</em>. Nada aleteando con dos aletas que parecen orejas. Se ha filmado a casi 7.000 m.</p>
+          <dl class="facts">
+            <div><dt>Presión</dt><dd>400 – 600 bar</dd></div>
+            <div><dt>Luz</dt><dd>Ninguna</dd></div>
+          </dl>
+          <button class="tab tab--ash goto" type="button" data-goto="3">Ver en la manivela</button>
+        </div>
+      </article>
+
+      <article class="zone zone--hadal" data-zone="4">
+        <svg class="zone-art" viewBox="0 0 240 140" aria-hidden="true"><use href="#art-snail"/></svg>
+        <div class="zone-body">
+          <h3 class="zone-name">Hadal</h3>
+          <p class="zone-range">6.000 – 10.935 m</p>
+          <p class="zone-text">Las fosas. La zona lleva el nombre de Hades. En el fondo del Challenger Deep, cada centímetro cuadrado soporta más de una tonelada.</p>
+          <p class="strip"><strong>Pez caracol de las Marianas</strong> <em>Pseudoliparis swirei</em>. Vive aproximadamente entre 6.900 y 8.000 m. Más abajo, en el fondo, te esperan los anfípodos <em>Hirondellea gigas</em>.</p>
+          <dl class="facts">
+            <div><dt>Presión</dt><dd>600 – 1.086 bar</dd></div>
+            <div><dt>Luz</dt><dd>La que llevas tú</dd></div>
+          </dl>
+          <button class="tab tab--crimson goto" type="button" data-goto="4">Bajar hasta el fondo</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="day" id="un-dia" aria-labelledby="dia-title">
+      <header class="section-head">
+        <h2 class="h2" id="dia-title">Un día de inmersión</h2>
+        <p class="section-lede">El sumergible baja por su propio peso y sube soltando lastre. Este es el perfil de una inmersión, con tiempos aproximados.</p>
+      </header>
+      <div class="profile">
+        <svg class="profile-art" viewBox="0 0 1100 320" preserveAspectRatio="none" aria-hidden="true">
+          <rect class="band band-0" x="0" y="20" width="1100" height="5.2"/>
+          <rect class="band band-1" x="0" y="25.1" width="1100" height="20.6"/>
+          <rect class="band band-2" x="0" y="45.6" width="1100" height="82"/>
+          <rect class="band band-3" x="0" y="127.5" width="1100" height="54.2"/>
+          <rect class="band band-4" x="0" y="181.6" width="1100" height="118.4"/>
+          <path class="band-rock" d="M0 300 L120 296 L260 304 L400 300 L660 300 L820 305 L960 297 L1100 302 L1100 320 L0 320 Z"/>
+          <polyline class="profile-path" points="40,20 400,300 660,300 1060,20"/>
+          <line class="profile-floor" x1="400" y1="300" x2="660" y2="300"/>
+        </svg>
+        <ol class="profile-marks" aria-hidden="true">
+          <li style="--x: 5%; --y: 9%"><span class="stop-time">H+0</span></li>
+          <li style="--x: 9%; --y: 17%"><span class="stop-time">≈ 20 min</span></li>
+          <li style="--x: 35%; --y: 82%"><span class="stop-time">≈ H+4</span></li>
+          <li style="--x: 56%; --y: 82%"><span class="stop-time">≈ H+7</span></li>
+          <li class="mark-end" style="--y: 9%"><span class="stop-time">≈ H+11</span></li>
+        </ol>
+      </div>
+      <ol class="stop-list">
+        <li><span class="stop-time">H+0</span><span class="stop-text">Se sueltan los cabos. Empieza la caída libre.</span></li>
+        <li><span class="stop-time">≈ 20 min</span><span class="stop-text">Pasas los 1.000 m. Se acaba la luz del sol.</span></li>
+        <li><span class="stop-time">≈ H+4</span><span class="stop-text">Fondo: 10.935 m. Se encienden los focos.</span></li>
+        <li><span class="stop-time">≈ H+7</span><span class="stop-text">Se suelta el lastre. Empieza el ascenso.</span></li>
+        <li><span class="stop-time">≈ H+11</span><span class="stop-text">Superficie y barco de apoyo.</span></li>
+      </ol>
+    </section>
+
+    <section class="vessel" id="sumergible" aria-labelledby="sub-title">
+      <header class="section-head">
+        <h2 class="h2" id="sub-title">El sumergible, pieza a pieza</h2>
+        <p class="section-lede">Configuración ilustrativa. Lo que no es ilustrativo es la física de la que te protege.</p>
+      </header>
+      <div class="vessel-grid">
+        <div class="kit" aria-hidden="true">
+          <svg viewBox="0 0 520 460">
+            <path class="kit-axis" d="M260 62 V100 M260 277 V320 M112 183 H171 M348 218 H390"/>
+            <g class="kit-part" transform="translate(52 -78.4) scale(2.6)"><polygon class="p2" points="44,34 116,34 126,54 34,54"/><polygon class="p1" points="44,34 116,34 108,44 52,44"/></g>
+            <g class="kit-part" transform="translate(52 -50.8) scale(2.6)">
+              <polygon class="p1" points="80,58 104,66 114,90 80,92"/><polygon class="p2" points="80,58 56,66 46,90 80,92"/><polygon class="p3" points="46,90 56,116 80,126 80,92"/><polygon class="p2" points="114,90 104,116 80,126 80,92"/><circle class="ink" cx="96" cy="94" r="10"/><circle class="port" cx="96" cy="94" r="6"/>
+            </g>
+            <g class="kit-part" transform="translate(2.4 -22.4) scale(2.6)"><rect class="p3" x="26" y="74" width="16" height="10"/></g>
+            <g class="kit-part" transform="translate(93.6 -54.8) scale(2.6)"><polygon class="p2" points="114,104 128,98 132,108 118,112"/></g>
+            <g class="kit-part" transform="translate(52 -7.6) scale(2.6)"><rect class="p3" x="58" y="126" width="12" height="10"/><rect class="p3" x="90" y="126" width="12" height="10"/></g>
+            <g class="kit-part" transform="translate(40 300)"><path class="arm" d="M60 0 L90 40 L70 70 M70 70 L56 84 M70 70 L84 86"/></g>
+            <g class="kit-pin"><line x1="372" y1="36" x2="463" y2="36"/><circle cx="478" cy="36" r="15"/><text x="478" y="43">1</text></g>
+            <g class="kit-pin"><line x1="344" y1="160" x2="463" y2="140"/><circle cx="478" cy="138" r="15"/><text x="478" y="145">2</text></g>
+            <g class="kit-pin"><line x1="317" y1="333" x2="463" y2="352"/><circle cx="478" cy="354" r="15"/><text x="478" y="361">3</text></g>
+            <g class="kit-pin"><line x1="72" y1="172" x2="34" y2="128"/><circle cx="24" cy="116" r="15"/><text x="24" y="123">4</text></g>
+            <g class="kit-pin"><line x1="437" y1="226" x2="465" y2="250"/><circle cx="478" cy="260" r="15"/><text x="478" y="267">5</text></g>
+            <g class="kit-pin"><line x1="104" y1="350" x2="36" y2="402"/><circle cx="24" cy="412" r="15"/><text x="24" y="419">6</text></g>
+          </svg>
+        </div>
+        <ol class="parts">
+          <li><span class="part-num">1</span><div><h3>Espuma sintáctica</h3><p>Microesferas de vidrio en resina. Flota aunque la aplaste todo el océano.</p></div></li>
+          <li><span class="part-num">2</span><div><h3>Esfera de presión de titanio</h3><p>Tres personas dentro, a 1 bar. Fuera, 1.086 bar. Entre ambos lados, solo el casco.</p></div></li>
+          <li><span class="part-num">3</span><div><h3>Lastre de acero</h3><p>Bajas por tu propio peso. Para volver se suelta el lastre y el sumergible sube solo.</p></div></li>
+          <li><span class="part-num">4</span><div><h3>Propulsores</h3><p>Para maniobrar en el fondo. No para bajar: de eso se encarga la gravedad.</p></div></li>
+          <li><span class="part-num">5</span><div><h3>Focos y cámaras</h3><p>Por debajo de los 1.000 m, toda la luz la pone el sumergible.</p></div></li>
+          <li><span class="part-num">6</span><div><h3>Brazo manipulador</h3><p>Para tomar muestras de sedimento del fondo de la fosa.</p></div></li>
+        </ol>
+      </div>
+      <div class="before">
+        <h3 class="before-title">Antes que tú</h3>
+        <ul class="before-list">
+          <li class="tab tab--flat"><span class="yr">1960</span><span><strong>Trieste</strong>. Jacques Piccard y Don Walsh.</span></li>
+          <li class="tab tab--flat"><span class="yr">2012</span><span><strong>Deepsea Challenger</strong>. James Cameron, en solitario.</span></li>
+          <li class="tab tab--flat"><span class="yr">2019</span><span><strong>Limiting Factor</strong>. Victor Vescovo.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="brief" id="briefing" aria-labelledby="brief-title">
+      <div class="sheet">
+        <header class="sheet-head">
+          <h2 class="h2 h2--ink" id="brief-title">Solicita el briefing de expedición</h2>
+          <p>Una conversación con el equipo: preparación, seguridad, el sumergible y las fechas posibles. Sin compromiso.</p>
+        </header>
+        <form class="brief-form" id="brief-form" novalidate>
+          <div class="f">
+            <label for="b-name">Nombre</label>
+            <input class="field field--ink" id="b-name" name="name" autocomplete="name" required aria-describedby="b-name-err">
+            <p class="err" id="b-name-err"></p>
+          </div>
+          <div class="f">
+            <label for="b-email">Correo</label>
+            <input class="field field--ink" id="b-email" name="email" type="email" autocomplete="email" required aria-describedby="b-email-err">
+            <p class="err" id="b-email-err"></p>
+          </div>
+          <div class="f">
+            <label for="b-country">País de residencia</label>
+            <input class="field field--ink" id="b-country" name="country" autocomplete="country-name">
+          </div>
+          <div class="f">
+            <label for="b-window">Ventana preferida</label>
+            <select class="field field--ink" id="b-window" name="window">
+              <option>Sin preferencia</option>
+              <option>Primera mitad del año</option>
+              <option>Segunda mitad del año</option>
+            </select>
+          </div>
+          <fieldset class="f f--wide">
+            <legend>¿Has hecho algo parecido?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="exp" value="none" checked><span>Nunca</span></label>
+              <label class="choice"><input type="radio" name="exp" value="dive"><span>Buceo o inmersiones</span></label>
+              <label class="choice"><input type="radio" name="exp" value="extreme"><span>Otra expedición extrema</span></label>
+            </div>
+          </fieldset>
+          <div class="f f--wide">
+            <label for="b-msg">¿Qué quieres saber? <span class="opt">(opcional)</span></label>
+            <textarea class="field field--ink" id="b-msg" name="msg" rows="4"></textarea>
+          </div>
+          <div class="f f--wide submit-row">
+            <button class="tab tab--crimson tab--big" type="submit" id="brief-submit">
+              <svg class="spin" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="16"/><rect x="56" y="54" width="44" height="12"/><circle cx="96" cy="60" r="12"/></svg>
+              <span>Enviar solicitud</span>
+            </button>
+            <p class="demo-note">Demo: este formulario no envía datos a ningún sitio.</p>
+          </div>
+        </form>
+        <div class="sent" id="sent" hidden tabindex="-1">
+          <h3>Recibido.</h3>
+          <p>Si esto fuera real, el equipo te escribiría a <strong id="sent-email"></strong> para agendar el briefing. Mientras tanto, la manivela sigue ahí arriba.</p>
+          <a class="tab tab--ash" href="#bajada">Volver a bajar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="foot-brand">Hadal</p>
+    <p>HADAL es una marca ficticia creada como ejercicio de diseño. Las profundidades, presiones, especies e inmersiones históricas son reales; precios, fechas y especificaciones no lo son.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

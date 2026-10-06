@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-06T04:27:01.219Z",
+        "reason": "Agent: every flagged pair is text on a cut-paper tab whose fill is painted by ::before with clip-path; detector reads the parent board. Real pairs verified by hand: #14161a/#cbc3b1 ~11:1, #4a4740/#cbc3b1 ~5.4:1, #e9e3d6/#b3242b ~5.1:1, #b3242b/#e9e3d6 ~5.1:1"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-06T04:27:01.245Z",
+        "reason": "Agent: flagged nodes are the diorama window and full-bleed paper strata; flush edges are the cut-paper construction, not text containers"
+      }
+    ]
+  }
+}
